@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #F6921E;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-family: "Futura"
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn2 {
+  background-color: #EC1C24;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-family: "Futura"
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn3 {
+  background-color: #EB008B;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-family: "Futura"
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn4 {
+  background-color: #90278E;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-family: "Futura"
+  border: none;
+}
+
+  .dropbtn5 {
+    background-color: #0087A4;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-family: "Futura"
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn6 {
+    background-color: #D6DE23;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-family: "Futura"
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn7 {
+    background-color: #ffdd00;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-family: "Futura"
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn8 {
+    background-color: #FBB615;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-family: "Futura"
+    border: none;
+    cursor: pointer;
+  }
+
+
+
+.dropdown {
+  position: relative;
+  font-family: "Futura";
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  font-family: "Futura";
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-family: "Futura";
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+
+<body>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">INFRASTRUCTURE</button>
+  <div class="dropdown-content">
+    <a href="#running water">Running water</a>
+    <a href="#electrricity">Electricity</a>
+    <a href="#cooking gas/electricity">Cooking gas/electricity</a>
+    <a href="#waste collection">Waste Collection</a>
+    <a href="#sewage">Sewage</a>
+  </div>
+
+
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn2">FOOD SECURITY</button>
+    <div class="dropdown-content">
+      <a href="#">Food quality (7 days)</a>
+      <a href="#">Borrowed food (7 days)</a>
+      <a href="#">Reduced food amount (7 days)</a>
+      <a href="#">Reduced food portion (7 days)</a>
+      <a href="#">Reduced meals per day (7 days)</a>
+      <a href="#">No food days (7 days)</a>
+    </div>
+
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn3">ECONOMIC SECURITY</button>
+      <div class="dropdown-content">
+        <a href="#">Job informality</a>
+        <a href="#">Insufficient income (food, 30 days)</a>
+        <a href="#">Insufficient income (other, 30 days)</a>
+        <a href="#">Insufficient income (6 months)</a>
+        <a href="#">Debt</a>
+        <a href="#">Government Aid</a>
+        <a href="#">Aid (other)</a>
+
+      </div>
+
+      <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn4">HOUSING</button>
+        <div class="dropdown-content">
+          <a href="#">Makeshift housing</a>
+          <a href="#">Housing tenure</a>
+        </div>
+
+        <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn5">HAZARDS</button>
+          <div class="dropdown-content">
+            <a href="#">Female-owned housing</a>
+            <a href="#">Disasters</a>
+            <a href="#">Insecurity</a>
+            <a href="#">Violence</a>
+            <a href="#">COVID-19 (job loss)</a>
+            <a href="#">COVID-19 (less income)</a>
+            <a href="#">COVID-19 (income loss)</a>
+          </div>
+
+          <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn6">PERCEPTIONS</button>
+            <div class="dropdown-content">
+              <a href="#">Living area (dissatisfied)</a>
+              <a href="#">Economic conditions</a>
+              <a href="#">Living standard (deteriorted)</a>
+              <a href="#">Living standard (dissatisfied)</a>
+              <a href="#">Income (struggling)</a>
+              <a href="#">Income (critical)</a>
+              <a href="#">Chilren opportunities</a>
+              <a href="#">Confidence in elections</a>
+              <a href="#">Migration abroad good</a>
+
+            </div>
+
+            <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn7">DEMOGRAPHICS</button>
+              <div class="dropdown-content">
+                <a href="#">Age</a>
+                <a href="#">Sex</a>
+                <a href="#">Household size</a>
+                <a href="#">Disabilities</a>
+              </div>
+
+              <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn8">GEOGRAPHIC</button>
+                <div class="dropdown-content">
+                  <a href="#">Rural</a>
+                  <a href="#">Population</a>
+                </div>
+</div>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+</body>
+</html>
