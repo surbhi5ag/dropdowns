@@ -10,7 +10,6 @@
   font-size: 16px;
   font-family: "Futura"
   border: none;
-  cursor: pointer;
 }
 
 .dropbtn2 {
@@ -20,7 +19,6 @@
   font-size: 16px;
   font-family: "Futura"
   border: none;
-  cursor: pointer;
 }
 
 .dropbtn3 {
@@ -30,7 +28,6 @@
   font-size: 16px;
   font-family: "Futura"
   border: none;
-  cursor: pointer;
 }
 
 .dropbtn4 {
@@ -49,7 +46,6 @@
     font-size: 16px;
     font-family: "Futura"
     border: none;
-    cursor: pointer;
   }
 
   .dropbtn6 {
@@ -59,7 +55,6 @@
     font-size: 16px;
     font-family: "Futura"
     border: none;
-    cursor: pointer;
   }
 
   .dropbtn7 {
@@ -69,7 +64,6 @@
     font-size: 16px;
     font-family: "Futura"
     border: none;
-    cursor: pointer;
   }
 
   .dropbtn8 {
@@ -79,45 +73,45 @@
     font-size: 16px;
     font-family: "Futura"
     border: none;
-    cursor: pointer;
   }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
 
-.dropdown {
-  position: relative;
-  font-family: "Futura";
-  display: inline-block;
-}
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
-.dropdown-content {
-  display: none;
-  font-family: "Futura";
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown-content a {
-  color: black;
-  font-family: "Futura";
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown-content a:hover {background-color: #ddd;}
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
 
-.show {display: block;}
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /*.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
+
 </style>
 </head>
 
 <body>
 
 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">INFRASTRUCTURE</button>
+  <button class="dropbtn">INFRASTRUCTURE</button>
   <div class="dropdown-content">
     <a href="#running water">Running water</a>
     <a href="#electrricity">Electricity</a>
@@ -125,10 +119,10 @@
     <a href="#waste collection">Waste Collection</a>
     <a href="#sewage">Sewage</a>
   </div>
-
+</div>
 
   <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn2">FOOD SECURITY</button>
+    <button class="dropbtn2">FOOD SECURITY</button>
     <div class="dropdown-content">
       <a href="#">Food quality (7 days)</a>
       <a href="#">Borrowed food (7 days)</a>
@@ -137,9 +131,10 @@
       <a href="#">Reduced meals per day (7 days)</a>
       <a href="#">No food days (7 days)</a>
     </div>
+</div>
 
     <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn3">ECONOMIC SECURITY</button>
+      <button class="dropbtn3">ECONOMIC SECURITY</button>
       <div class="dropdown-content">
         <a href="#">Job informality</a>
         <a href="#">Insufficient income (food, 30 days)</a>
@@ -148,18 +143,19 @@
         <a href="#">Debt</a>
         <a href="#">Government Aid</a>
         <a href="#">Aid (other)</a>
-
+</div>
       </div>
 
       <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn4">HOUSING</button>
+      <button class="dropbtn4">HOUSING</button>
         <div class="dropdown-content">
           <a href="#">Makeshift housing</a>
           <a href="#">Housing tenure</a>
         </div>
+        </div>
 
         <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn5">HAZARDS</button>
+        <button class="dropbtn5">HAZARDS</button>
           <div class="dropdown-content">
             <a href="#">Female-owned housing</a>
             <a href="#">Disasters</a>
@@ -169,9 +165,10 @@
             <a href="#">COVID-19 (less income)</a>
             <a href="#">COVID-19 (income loss)</a>
           </div>
+          </div>
 
           <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn6">PERCEPTIONS</button>
+          <button class="dropbtn6">PERCEPTIONS</button>
             <div class="dropdown-content">
               <a href="#">Living area (dissatisfied)</a>
               <a href="#">Economic conditions</a>
@@ -182,20 +179,21 @@
               <a href="#">Chilren opportunities</a>
               <a href="#">Confidence in elections</a>
               <a href="#">Migration abroad good</a>
-
+</div>
             </div>
 
             <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn7">DEMOGRAPHICS</button>
+            <button class="dropbtn7">DEMOGRAPHICS</button>
               <div class="dropdown-content">
                 <a href="#">Age</a>
                 <a href="#">Sex</a>
                 <a href="#">Household size</a>
                 <a href="#">Disabilities</a>
               </div>
+</div>
 
               <div class="dropdown">
-              <button onclick="myFunction()" class="dropbtn8">GEOGRAPHIC</button>
+              <button class="dropbtn8">GEOGRAPHIC</button>
                 <div class="dropdown-content">
                   <a href="#">Rural</a>
                   <a href="#">Population</a>
@@ -208,6 +206,7 @@ toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
+
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
@@ -222,7 +221,30 @@ window.onclick = function(event) {
     }
   }
 }
+
+
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn2')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 </script>
+
+
+
 
 
 </body>
